@@ -43,7 +43,7 @@ Set rs = db.Execute(query)
 
 <% if Session("user") <> "guest" then %>
 <p>
-<a href="cal_edit.asp?action=add&event_context=<%=Request.QueryString("event_context")%>&context_name=<%=context_name%>&year=<%=y%>&month=<%=m%>">
+<a href="webCal3_edit.asp?action=add&event_context=<%=Request.QueryString(">
 <img src="/graphics/button_add.gif" border=0>
 </a>
 <% end if %>

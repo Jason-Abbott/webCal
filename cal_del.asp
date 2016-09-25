@@ -19,7 +19,7 @@ Delete "<%=rs("event_title")%>" from the <%=rs("name")%> calendar?
 <!--#include virtual="/header_end.inc"-->
 
 
-<form action="cal_deleted.asp" method="post">
+<form action="webCal3_deleted.asp" method="post">
 <center>
 <font color="#ff0000" size=6>This action is not reversable!</font>
 <p>
