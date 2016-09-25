@@ -1,30 +1,21 @@
 <%
-' Copyright 1997 Jason Abbott (jabbott@uidaho.edu)
-' Last updated 11/17/97
+' determine values for the month and year
+' of the next and previous calendar pages
 
-' Determine values for the month and year of the next
-' and previous calendar pages
-
-dim m,y,mnext,mprev,ynext,yprev
-
-sub cal_nav (month,year)
-	m = month
-	y = year
-	if m = 12 then
-		mnext = 1
-		mprev = m - 1
-		ynext = y + 1
-		yprev = y
-	elseif m = 1 then
-		mnext = m + 1
-		mprev = 12
-		ynext = y
-		yprev = y - 1
-	else
-		mnext = m + 1
-		mprev = m - 1
-		ynext = y
-		yprev = y
-	end if
-end sub
+if m = 12 then
+	mNext = 1
+	mPrev = m - 1
+	yNext = y + 1
+	yPrev = y
+elseif m = 1 then
+	mNext = m + 1
+	mPrev = 12
+	yNext = y
+	yPrev = y - 1
+else
+	mNext = m + 1
+	mPrev = m - 1
+	yNext = y
+	yPrev = y
+end if
 %>
