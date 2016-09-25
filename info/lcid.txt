@@ -1,0 +1,51 @@
+"Afrikaans",1078
+"Albanian",1052
+"Arabic",5121
+"Basque",1069
+"Bulgarian",1026
+"Catalan",1027
+"Chinese",3076
+"Croatian",1050
+"Czech",1029
+"Danish",1030
+"Dutch",1043
+"English (U.S.)",1033
+"English (non-U.S.)",2057
+"Estonian",1061
+"Faeroese",1080
+"Farsi",1065
+"Finnish",1035
+"French",1036
+"German",1031
+"Greek",1032
+"Hebrew",1037
+"Hindi",1081
+"Hungarian",1038
+"Icelandic",1039
+"Indonesian",1057
+"Italian",1040
+"Japanese",1041
+"Korean (Ext. Wansung)",1042
+"Korean (Johab)",2066
+"Latvian",1062
+"Lithuanian (Classic)",2087
+"Lithuanian",1063
+"Macedonian",1071
+"Malay",1086
+"Norwegian",1044
+"Polish",1045
+"Portuguese",2070
+"Romanian",1048
+"Russian",1049
+"Serbian (Cyrillic)",3098
+"Serbian (Latin)",2074
+"Slovak",1051
+"Slovene",1060
+"Spanish",1034
+"Swahili",1089
+"Swedish",1053
+"Thai",1054
+"Turkish",1055
+"Ukrainian",1058
+"Urdu",1056
+"Vietnamese",1066

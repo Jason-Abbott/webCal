@@ -1,0 +1,43 @@
+<html>
+<title>test</title>
+<body onload="init();" leftmargin=0 topmargin=0>
+
+<layer><div>
+<table width="200" height="50%">
+<tr>
+	<td bgcolor="0000ff">cart</td>
+</table>
+</div></layer>
+
+</body>
+</html>
+
+<script language="javascript"><!--
+
+//alert(document.all.div.style.display);
+
+var ie4 = document.all;
+var ns4 = document.layers;
+
+function init() {
+	setDisplay();
+	if (ns4) { window.captureEvents(Event.RESIZE); }
+	window.onresize = setDisplay;
+}
+
+function setDisplay(e) {
+	if (ie4) {
+		var frameWidth = document.body.offsetWidth;
+	} else if (ns4) {
+		var frameWidth = window.innerWidth;
+	}
+	if (frameWidth > 200) {
+		if (ns4) { document.layers[0].visibility="show"; }
+		if (ie4) { document.all.tags("DIV")(0).style.display = "block"; }
+	} else {
+		if (ns4) { document.layers[0].visibility="hide"; }
+		if (ie4) { document.all.tags("DIV")(0).style.display = "none"; }
+	}
+}
+//-->
+</script>

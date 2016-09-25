@@ -1,0 +1,170 @@
+* { font-family: Tahoma, Arial, Helvetica; font-size: 10pt; }
+
+BODY, SELECT { background-color: #ffffff; }
+A { color: #330033; text-decoration: none; }
+A:hover { color: #DC143C; }
+INPUT { font-size: 9pt; }
+DIV.footnote { font: 8pt, Verdana, Arial, Helvetica; }
+DIV.viewName{ font: bold 20pt Tahoma, Arial, Helvetica; color: #afadcf; }
+DIV.dialog { border: 1px solid #6f6d8f; }
+TD.titleBar {
+	font : 13pt Verdana, Arial, Helvetica;
+	background-color: #afadcf;
+	height: 12px;
+	padding-left: 2px;
+}
+
+/* Month View Styles */
+
+TD.dayName {
+	font : 9pt Tahoma, Arial, Helvetica;
+	background-color: #cfcdef;
+	text-align: center;
+}
+TD.dayCommon {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #ffffff;
+}
+TD.dayWeekend {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #bfbddf;
+}
+TD.dayThis {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #fAa092;
+}
+TD.other { background-color: #e0e0e0; color: #b0b0b0; }
+TD.dayLink {
+	font: bold 7pt Verdana, Arial, Helvetica;
+	text-align: center;
+	background-color: #e0e0e0;
+}
+TD.dayAdd {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+}
+DIV.eventTitle {
+	font : 8pt Arial, Helvetica;
+}
+
+/* Dialog Box Styles */
+
+DIV.dialog {
+	border: 1px solid #6f6d8f;
+}
+TABLE.form { background-color: #e0e0e0; font : 10pt Verdana, Arial, Helvetica; }
+TD.formDark { background-color: #c0c0c0; padding : 2px 2px 2px 2px; }
+TD.formLight { background-color: #e0e0e0; }
+DIV.button {
+	font: bold 9pt Tahoma, Arial, Helvetica;
+	color: #afadcf;
+	display: inline;
+	text-align: center;
+	background-color : #efedff;
+	border: 1px solid #bfbddf;
+}
+DIV.buttonOn {
+	font: bold 9pt Tahoma, Arial, Helvetica;
+	cursor: hand;
+	color: #330033;
+	display: inline;
+	text-align: center;
+	background-color: #ffffff;
+	border: 1px solid #FA8072;
+}
+
+A.SymbolButton {
+	font: normal 10pt Tahoma, Arial, Helvetica;
+	color: #8f8daf;
+	text-decoration: none;
+}
+A.SymbolButton:link { color : #8f8daf; }
+A.SymbolButton:visited { color : #8f8daf; }
+A.SymbolButton:hover { color : #dA6052; }
+IMG.Icon { margin: 0px 4px 0px 4px; }
+
+TABLE.DialogBox {
+	border: 1px solid #afadcf;
+	background-color: #dddddd;
+	font-size: 9pt;
+}
+TD.BoxTitle {
+	background-color: #8f8daf;
+	padding-left: 5px;
+	color: #ffffff;
+	font-size: 12pt;
+}
+TD.BoxLabel {
+	text-align: right;
+	background-color: #cccccc;
+	font-size: 10pt;
+	padding-right: 4px;
+}
+TD.BoxField {
+	background-color: #cccccc;
+	font-size: 10pt;
+}
+
+/* Grid View Styles */
+
+TABLE.gridView { background-color: #ffffff; margin-top: 5px; }
+TABLE.monthView { background-color: #8f8daf; }
+TABLE.navMonth { background-color: #8f8daf; }
+TD.navWeekdayName { font-size: 9pt; text-align: center; font-weight: bold; color: #ffffff; }
+TD.navDay { font-size: 9pt; font-weight: bold; vertical-align: top; }
+TD.monthLink {
+	background-color: #cfcdef;
+	text-align: center;
+	font-weight: bold;
+	font-size: 10pt;
+	border: 1px solid #8f8daf;
+}
+TD.segment { border-bottom: 1px solid #8f8daf; border-left: 1px solid #8f8daf; }
+TD.biz { background-color: #ffdd33; border-bottom: 1px solid #efcd23; }
+TD.spacer { border-bottom: 1px solid #8f8daf; }
+TD.evenBiz { background-color: #fffad3; }
+TD.oddBiz { background-color: #ffeda3; }
+TD.hourLeft {
+	background-color: #cfcdef;
+	text-align: right;
+	font-size: 11pt;
+	padding: 0px 4px 0px 2px;
+}
+TD.hourRight {
+	text-align: center;
+	font-size: 8pt;
+	padding: 0px 2px 0px 2px;
+	width: 5%;
+}
+TD.untimed { font-size: 4pt; text-align: center; background-color: #8f8daf; }
+TD.even { background-color: #eeeeee; }
+TD.odd { background-color: #d9d9d9; }
+TD.rowEnd {
+	border-bottom: 1px solid #8f8daf;
+	border-right: 1px solid #8f8daf;
+	border-left: 1px solid #8f8daf;
+}
+TD.weekdayName { text-align: center; font-size: 6pt; }
+SUP.minute { padding-left: 2px; border-bottom: 1px solid #dfddff; color: #444444; font-size: .7em; }
+TD.weekDate {
+	background-color: #8f8daf;
+	text-align: center;
+	width: 20%;
+	color: #efedff;
+	font-weight: bold;
+	font-size: 10pt;
+	padding: 0px 2px 0px 2px;
+}
+TD.gridCorner { border-bottom: 1px solid #8f8daf; }
+TD.week { border-left: 1px solid #8f8daf; border-bottom: 1px solid #8f8daf; padding: 1px;  }
+TD.weekBiz { background-color: #dfddff; }
+TD.weekEnd { background-color: #bfbddf; }
+TD.weekToday { background-color: #ddbbff; }
+TD.event {
+	border-left: 4px solid #ff0000;
+	border-bottom: 1px solid #8f8daf;
+	background-color: #ffffff;
+	vertical-align: top;
+	padding: 0px;
+}
+DIV.eventContainer { position: absolute; padding: 0px; overflow: hidden; width: 100%; border-left: 1px solid #8f8daf; }
+DIV.event { padding: 2px; font-size: 8pt; position: absolute; }

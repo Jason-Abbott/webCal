@@ -1,0 +1,87 @@
+A:hover {
+	COLOR: blue
+}
+A TT {
+	FONT-FAMILY: monospace
+}
+.nodisp {
+	DISPLAY: none
+}
+H2.head {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; COLOR: #003333; FONT-FAMILY: sans-serif
+}
+H2 SMALL {
+	FONT-SIZE: 70%; COLOR: #003333
+}
+B.brHead {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #003333; FONT-FAMILY: sans-serif
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #003333; FONT-FAMILY: sans-serif
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #003333; FONT-FAMILY: sans-serif
+}
+H3 SMALL {
+	FONT-SIZE: 80%; COLOR: #003333
+}
+H3 TT {
+	FONT-FAMILY: monospace
+}
+H2 TT {
+	FONT-FAMILY: monospace
+}
+TD TT {
+	FONT-FAMILY: monospace
+}
+PRE TT {
+	COLOR: black
+}
+A.quick {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: Arial,sans-serif; TEXT-DECORATION: none
+}
+.sans {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial,Verdana,sans-serif
+}
+.note {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: black 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; BORDER-LEFT: black 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: black 1px solid; FONT-FAMILY: Arial,Geneva,sans-serif; TEXT-ALIGN: center
+}
+.note1 {
+	BORDER-RIGHT: purple 4px double; PADDING-RIGHT: 5px; BORDER-TOP: purple 4px double; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; BORDER-LEFT: purple 4px double; PADDING-TOP: 5px; BORDER-BOTTOM: purple 4px double; FONT-FAMILY: Arial,Geneva,sans-serif; TEXT-ALIGN: left
+}
+.indented {
+	MARGIN-LEFT: 20px; MARGIN-RIGHT: 20px
+}
+PRE {
+	MARGIN-LEFT: 10px; COLOR: #000099
+}
+TT {
+	COLOR: #000099
+}
+TD.trlist {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial,Geneva,sans-serif
+}
+TD.trlist2 {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial,Geneva,sans-serif
+}
+TD.trlist1 {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial,Geneva,sans-serif
+}
+TD.trlist B {
+	FONT-SIZE: 10pt; FONT-FAMILY: monospace
+}
+TD SUP {
+	FONT-SIZE: 8pt; COLOR: #993366; FONT-FAMILY: Arial,Geneva,sans-serif
+}
+SUP {
+	FONT-SIZE: 8pt; COLOR: #993366; FONT-FAMILY: Arial,Geneva,sans-serif
+}
+.elment {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial,Geneva,sans-serif
+}
+.leftMenu {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial,Geneva,Verdana,Helvetica; TEXT-DECORATION: none
+}
+.leftMenuMore {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; FONT-FAMILY: Arial,Geneva,Verdana,Helvetica; TEXT-DECORATION: none
+}

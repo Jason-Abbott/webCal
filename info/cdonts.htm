@@ -1,0 +1,92 @@
+
+
+
+<HTML>
+<HEAD>
+
+</HEAD>
+
+<BODY link="blue"  vlink="blue"  bgcolor="CCCC99">
+<CENTER>
+
+<a href='http://www.aspalliance.com/admin/advt/ad_redir.asp?advertisement_id=1&site=rtaylor'><img src='http://www.aspalliance.com/admin/advt/banners/aspencrypt.gif' alt='AspEncrypt' border='0'></a>
+<BR>
+<TABLE><TR>
+<TD>
+<FONT SIZE="3"  FACE="arial"><B>Rob Taylor at the Alliance</B></FONT>
+<BR>
+</TD>
+
+<TD  bgcolor="lightyellow">
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<FONT SIZE="2"  FACE="arial"><B>
+<A HREF="javascript:history.back()">Previous Page</A> <B>OR</B>
+<A HREF="/rtaylor/">RobT ASP</A> --> 
+<A HREF="/rtaylor/cdonts/">cdonts</A>
+
+
+</B></FONT>
+</TD>
+</TR></TABLE>
+
+<BR>
+</TD>
+<TD valign="top">
+<TABLE bgcolor="lightyellow"  width="500" border="1" cellpadding="5" bordercolor="E0E0E0"><TR><TD>
+<FONT FACE="arial"  SiZE="2">
+
+
+
+<H4>A simple CDONTS Example</H4>
+
+<TABLE border="1" bgcolor=e0e0e0><TR><TD><PRE><font size="2"> &lt;%
+  Dim objMail
+  Set objMail = Server.CreateObject(&quot;CDONTS.NewMail&quot;)
+  
+  EM = request.form(&quot;email&quot;)
+  
+     objMail.From = &quot;rtaylor@aspalliance.com&quot;
+     objMail.Subject = &quot;How <font color="#000099"><b>TO</b></font> send email with CDONTS&quot;
+     objMail.To = EM
+     objMail.Body = &quot;This is an email message&quot; &amp; vbcrlf&amp;_ 
+     &quot;with CDONTS.&quot; &amp; vbcrlf&amp;_
+     &quot;This article can be found here &quot; &amp; vbcrlf&amp;_
+     &quot;http://www.aspadvice.com/cdonts/cdonts.asp&quot; 
+     objMail.Send
+ 
+ 'You must always do this with CDONTS.  You should 
+ 'do it anyway.
+ 'objMail.close
+  set objMail = nothing
+  
+  
+ Response.write(&quot;Mail was Sent&quot;)
+ 
+ 
+  %&gt;
+  </font></PRE></TD></TR><TR><TD colspan=2><FONT SIZE=4 FACE=arial><BR><A HREF=cdonts_test.asp><B>Try this script</A></FONT></B></TD></TR></TABLE><BR><BR>
+<FORM>
+<INPUT TYPE="submit"  NAME="mode"  value="print this page">
+</FORM>
+
+
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+
+<FONT FACE="arial"  SIZE="2">
+<CENTER>
+<A HREF="javascript:history.back()">BACK</A>
+</CENTER>
+</TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+<BR><BR>
+
+<a href='http://www.aspalliance.com/admin/advt/ad_redir.asp?advertisement_id=3&site=rtaylor'><img src='http://www.aspalliance.com/admin/advt/banners/aspupload.gif' alt='AspUpload' border='0'></a>
+
+</BODY>
+</HTML>
+

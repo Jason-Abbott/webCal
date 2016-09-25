@@ -1,0 +1,74 @@
+<html>
+<head>
+<script>
+<!--
+
+/*
+Textual Tooltip Script II- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+
+var content=new Array()
+//change the array below to the text associated with your links Expand or contract the array, depending on how many links you have
+content[0]='<br><big><b>Menus and navigation systems</b></big><br>Click here for DHTML scripts that help enhance your site\'s navigability, such as collapsible menus, sliding menu bars etc.'
+content[1]='<br><big><b>Special document effects</b></big><br>With the advent of DHTML, webpages are one step closer to its cousin, TV, in terms of special effects...'
+content[2]='<br><big><b>Scrollers</b></big><br>Up until now, adding a scroller or tickertape to your website usually meant using a slow Java applet. Not anymore. Click here for DHTML scrollers that accomplish the same task with minimal download time.'
+content[3]='<br><big><b>Image effects</b></big><br>Add lightweight effects to your existing images using these scripts. Make them fly, light up, turn static, all without paying the cost of slow downloading time.'
+content[4]='<br><big><b>Links and buttons</b></big><br>Add tooltips to your text links, rollover effects to your form buttons, keyboard features to your document, and more.'
+content[5]='<br><big><b>Dynamic clocks and dates</b></big><br>Time is never static, so why should your time script be? Enter for DHTML scripts that actually understand this simple truth.'
+content[6]='<br><big><b>Text animations</b></big><br>Text have been silent for too long- DHTML promises to free them, with flying text, typing text, dragable text, and more.'
+content[7]='<br><big><b>Browser window</b></big><br>Click here scripts related to the browser window and frames.'
+content[8]='<br><big><b>Other</b></big><br>All scripts that don\'t comfortably fit in any of the above categories go here...'
+
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers)
+setTimeout("window.onresize=regenerate",450)
+}
+
+function changetext(whichcontent){
+if (document.all)
+descriptions.innerHTML='<font face="Verdana"><small>'+whichcontent+'<font></small>'
+else if (document.layers){
+document.d1.document.d2.document.write('<font face="Verdana"><small>'+whichcontent+'</small></font>')
+document.d1.document.d2.document.close()
+}
+
+}
+
+
+//-->
+</script>
+</head>
+
+<body>
+<div id="scriptmenu" style="line-height:20px"><p><strong><font
+            face="Verdana"><a href="../dynamicindex1/index.html" onMouseover="changetext(content[0])"><small>Menus
+            and Navigation Systems</small></a><br>
+            <a href="../dynamicindex3/index.html" onMouseover="changetext(content[1])"><small>Special&nbsp;document
+            effects</small></a><br>
+            <a href="../dynamicindex2/index.html" onMouseover="changetext(content[2])"><small>Scrollers</small></a><br>
+            <a href="../dynamicindex4/index.html" onMouseover="changetext(content[3])"><small>Image
+            effects</small></a><br>
+            <a href="index.html" onMouseover="changetext(content[4])"><small>Links and buttons</small></a><br>
+            <a href="../dynamicindex6/index.html" onMouseover="changetext(content[5])"><small>Dynamic
+            Clocks and dates</small></a><br>
+            <a href="../dynamicindex10/index.html" onMouseover="changetext(content[6])"><small>Text
+            animations</small></a><br>
+            <a href="../dynamicindex8/index.html" onMouseover="changetext(content[7])"><small>Browser
+            Window</small></a><br>
+            <a href="../dynamicindex11/index.html" onMouseover="changetext(content[8])"><small>Other</small></a></font></strong></p>
+</div>
+
+<ilayer id="d1" width="155" height="155">
+<layer id="d2" width="155" height="155">
+<div id="descriptions" align="left">
+</div>
+</ilayer>
+</layer>

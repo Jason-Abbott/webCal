@@ -1,0 +1,111 @@
+BODY {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10pt;
+	background-color: #dfddff;
+}
+A {
+	color: #330033;
+	text-decoration: none;
+}
+A:hover {
+	color: #DC143C;
+}
+INPUT {
+	font-size: 9pt;
+ }
+SELECT {
+	font : bold 9pt Tahoma, Arial, Helvetica;
+	background-color : #efedff;
+	color : #8f8daf;
+}
+DIV.footnote {
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 8pt;
+}
+DIV.viewName{
+	font : bold 20pt Tahoma, Arial, Helvetica;
+	color: #afadcf;
+}
+TD.dayName {
+	font : 9pt Tahoma, Arial, Helvetica;
+	background-color: #cfcdef;
+	text-align: center;
+}
+TD.dayCommon {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #ffffff;
+}
+TD.dayWeekend {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #bfbddf;
+}
+TD.dayThis {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #fAa092;
+}
+TD.dayOther {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+	background-color: #e0e0e0;
+	color: #b0b0b0;
+}
+TD.dayLink {
+	font: bold 7pt Verdana, Arial, Helvetica;
+	text-align: center;
+	background-color: #e0e0e0;
+}
+TD.dayAdd {
+	font : bold 10pt Tahoma, Arial, Helvetica;
+}
+DIV.eventTitle {
+	font : 8pt Arial, Helvetica;
+}
+DIV.dialog {
+	border: 1px solid #6f6d8f;
+}
+TD.titleBar {
+	font : 13pt Verdana, Arial, Helvetica;
+	background-color: #afadcf;
+	height: 12px;
+	padding-left: 2px;
+}
+TABLE.form {
+	background-color: #e0e0e0;
+	font : 10pt Verdana, Arial, Helvetica;
+}
+TD.formDark {
+	background-color: #c0c0c0;
+	padding : 2px 2px 2px 2px;
+}
+TD.formLight {
+	background-color: #e0e0e0;
+}
+
+DIV.button {
+	font: bold 9pt Tahoma, Arial, Helvetica;
+	color: #afadcf;
+	display: inline;
+	text-align: center;
+	background-color : #efedff;
+	border: 1px solid #bfbddf;
+}
+DIV.buttonOn {
+	font: bold 9pt Tahoma, Arial, Helvetica;
+	cursor: hand;
+	color: #330033;
+	display: inline;
+	text-align: center;
+	background-color: #ffffff;
+	border: 1px solid #FA8072;
+}
+
+A.SymbolButton {
+	font : normal 10pt Tahoma, Arial, Helvetica;
+	color: #8f8daf;
+	text-decoration: none;
+}
+A.SymbolButton:link { color : #8f8daf; }
+A.SymbolButton:visited { color : #8f8daf; }
+A.SymbolButton:hover { color : #dA6052; }
+IMG.Icon {
+	padding: 0px 10px 0px 10px;
+}	

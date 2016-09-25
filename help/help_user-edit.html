@@ -1,0 +1,28 @@
+<!--#include file="help_top.inc"-->
+<table>
+<tr>
+	<td valign="top" width="50%"><font face="<%=arFont(0)%>" size=2>
+	<dl>
+	<dt><a name="permissions"><b>About Permissions</b></a>
+	<dd>Per group permissions always override a user's default permissions.  If you want users to access only those groups they've been granted specific rights to then you should leave their default permission level set to "no access."<p>Only administrators are exempt from this rule.  Users with administrative privileges cannot be denied access to any group.
+	<p>
+	</dl>
+	</td>
+	<td valign="top" width="50%"><font face="<%=arFont(0)%>" size=2>
+	<dl>
+	<dt><b>no access</b>
+	<dd>The user cannot see events scheduled in this group.  However, if the same event occurs in more than one group then the user will be subject to the <b>least restrictive</b>.
+	<dt><b>read</b>
+	<dd>The user can only view events, not add or edit them.
+	<dt><b>add</b>
+	<dd>The user can view and add new events, but not edit existing events.
+	<dt><b>edit</b>
+	<dd>The user can view and add events as well as edit existing events.
+	<dt><b>manage</b>
+	<dd>In addition to the above, the user can modify user permissions within the group.
+	</dl>
+	</td>
+</table>
+<!--#include file="help_bottom.inc"-->
+
+<script language="javascript" SRC="./help/webCal4_help.js"></script>

@@ -1,0 +1,168 @@
+<style>
+BODY {margin: 0px}
+#menuBar {position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 22px;
+	border: 1px solid lightblue;
+	background-color: lightblue;
+	layer-background-color: lightblue}
+.daMenu {position: absolute;
+	width: 100px;
+	height: 22px;
+	border: 1px solid lightblue;
+	layer-background-color: lightblue;
+	top: 0}
+.moreMenu {position: absolute;
+	width: 100px;
+	border: 1px solid red;
+	background-color: red;
+	layer-background-color: red;
+	visibility: hidden;
+	top: 22px;}
+.itemAnchor {font-family: Verdana;
+	font-size: 12px;
+	color: black;
+	text-decoration: none}
+.monkey {position:absolute;
+	left:300px;
+	top:150px;
+	visibility: hidden}
+#webmonkey {left: 0}
+#moreMonkey {position: absolute; left: 0}
+</style>
+<script>
+
+if (document.layers) {
+  visible = 'show';
+  hidden = 'hide';
+} else if (document.all) {
+  visible = 'visible';
+  hidden = 'hidden';
+}
+
+function reveal(menu, parent) {
+  if (document.layers) {
+    daMenu = document.layers[menu];
+  } else if (document.all) {
+    daMenu = document.all(menu).style;
+  }
+  if (daMenu.visibility == visible) {
+    daMenu.visibility = hidden;
+  } else {
+    daMenu.visibility = visible;
+  }
+  lastMenu = daMenu;
+}
+
+var lastItem = 'aaron';
+
+function menuItem(item){
+  if (document.layers) {
+    daLast = document.layers[lastItem];
+    daItem = document.layers[item];
+  } else if (document.all) {
+    daLast = document.all(lastItem).style;
+    daItem = document.all(item).style;
+  }
+  daLast.visibility = hidden;
+  daItem.visibility = visible;
+  lastMenu.visibility = hidden;
+  lastItem = item;
+}
+</script>
+
+
+
+</head>
+<body MARGINWIDTH="0" MARGINHEIGHT="0" bgcolor="#FFFFFF" text="#000000">
+
+
+
+<span class="itemAnchor"></span> 
+<div id="menuBar">
+</div>
+
+<div id="webmonkey" class="daMenu"><a href="#" class="itemAnchor"onclick="javascript: reveal('moreMonkey', 'webmonkey'); return false;">Webmonkey</a></div>
+
+<div id="moreMonkey" class="moreMenu">
+   <a href="#" class="itemAnchor" onclick="menuItem('aaron'); return false">Aaron</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('captCursor'); return false">Captain&nbsp;Cursor</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('cassandra'); return false">Cassandra</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('chris'); return false">Chris</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('courtney'); return false">Courtney</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('jeff'); return false">Jeff</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('joanne'); return false">Joanne</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('jeanPierre'); return false">Jean Pierre</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('klug'); return false">Klug</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('kristin'); return false">Kristin</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('nadav'); return false">Nadav</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('taylor'); return false">Taylor</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('thau'); return false">Thau</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('tim'); return false">Tim</a><br>
+   <a href="#" class="itemAnchor" onclick="menuItem('wendy'); return false">Wendy</a><br>
+</div>      
+
+
+<div id="aaron" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/aaron.gif" width="40" height="71"> 
+</div>
+<div id="anna" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/anna.gif" width="40" height="71"> 
+</div>
+<div id="captCursor" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/captcursor.gif" width="40" height="71"> 
+</div>
+<div id="cassandra" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/cassandra.gif" width="40" height="71"> 
+</div>
+<div id="chris" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/chris.gif" width="40" height="71"> 
+</div>
+<div id="courtney" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/courtney.gif" width="40" height="71"> 
+</div>
+<div id="jeanPierre" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/jeanPierre.gif" width="40" height="71"> 
+</div>
+<div id="jeff" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/jeff.gif"> 
+</div>
+<div id="joanne" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/joanne.gif" width="40" height="71"> 
+</div>
+<div id="klug" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/klug.gif" width="40" height="71"> 
+</div>
+<div id="kristin" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/kristin.gif" width="40" height="71"> 
+</div>
+<div id="nadav" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/nadav.gif" width="40" height="71"> 
+</div>
+<div id="shvatz" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/shvatz.gif" width="40" height="71"> 
+</div>
+<div id="taylor" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/taylor.gif" width="40" height="71"> 
+</div>
+<div id="thau" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/thau.gif" width="40" height="71"> 
+</div>
+<div id="tim" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/tim01.gif" width="40" height="71"> 
+</div>
+<div id="wendy" class="monkey">
+  <img src="http://a1112.g.akamai.net/7/1112/492/02012000/static.wired.com/webmonkey/98/10/stuff/wendy.gif" width="40" height="71"> 
+
+
+
+</div>
+</body>
+</html>
+
+
+
+</body>
+</html>

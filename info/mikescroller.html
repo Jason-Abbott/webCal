@@ -1,0 +1,42 @@
+<script language="JavaScript" src="dhtmllib.js"></script>
+<script language="JavaScript" src="scroller.js"></script>
+<script language="JavaScript">
+
+/*
+Mike's DHTML scroller (By Mike Hall @ Brainjar.com)
+Permission granted to Dynamicdrive.com to include script in archive
+For this and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+var myScroller1 = new Scroller(0, 0, 480, 32, 1, 8);
+myScroller1.setColors("#006600", "#ccffcc", "#009900");
+myScroller1.setFont("Verdana,Arial,Helvetica", 2);
+myScroller1.addItem("<b>Click here for <a href='http://dynamicdrive.com'>Dynamic Drive</a>, the net\'s #1 DHTML site!</b>");
+myScroller1.addItem("<b>Visit <a href='http://www.brainjar.com'>Brain Jar</a>, Mike\'s great coding site!</b>");
+myScroller1.addItem("<b>Looking for free JavaScripts? Visit <a href='http://wsabstract.com'>Website Abstraction.</a>");
+myScroller1.addItem("<b>Stay abreast on the latest technology news, with <a href='http://news.com'>News.com.</a></b>");
+
+function runmikescroll() {
+
+  var layer;
+  var mikex, mikey;
+
+  // Locate placeholder layer so we can use it to position the scrollers.
+
+  layer = getLayer("placeholder");
+  mikex = getPageLeft(layer);
+  mikey = getPageTop(layer);
+
+  // Create the first scroller and position it.
+
+  myScroller1.create();
+  myScroller1.hide();
+  myScroller1.moveTo(mikex, mikey);
+  myScroller1.setzIndex(100);
+  myScroller1.show();
+}
+
+window.onload=runmikescroll
+</script>
+
+<div id="placeholder" style="position:relative; width:420px; height:32px;">&nbsp;</div>

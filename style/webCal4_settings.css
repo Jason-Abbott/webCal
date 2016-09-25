@@ -1,0 +1,13 @@
+#divSettings {
+	background-color : #cfcdef;
+	border : 1px solid #8f8daf;
+	position: absolute;
+	visibility: hidden;
+	left : 200px;
+	top: 100px;
+}
+TABLE.tblSettings {
+	font : 9pt Tahoma, Arial, Helvetica;
+	border : 1px solid #8f8daf;
+	background-color : #cfcdef;
+}

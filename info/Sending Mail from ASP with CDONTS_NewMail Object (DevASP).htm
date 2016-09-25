@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0038)http://www.devasp.com/Samples/mail.asp -->
+<HTML><HEAD><TITLE>Sending Mail from ASP with CDONTS.NewMail Object (DevASP)</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<STYLE>A:hover {
+	COLOR: #ff0000
+}
+.Slink {
+	COLOR: #ffff00; FONT-FAMILY: Arial; FONT-SIZE: 13px
+}
+A {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.head1 {
+	COLOR: #686898; FONT-FAMILY: Arial, Verdana; FONT-SIZE: 35px
+}
+.main {
+	COLOR: #000000; FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.b {
+	COLOR: #0000ff; FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.three {
+	COLOR: #0000ff; FONT-FAMILY: Arial; FONT-SIZE: 12pt
+}
+.yellow {
+	BACKGROUND: yellow
+}
+.YELL {
+	BACKGROUND: #fffcc5; COLOR: #000000
+}
+.EE {
+	BACKGROUND: #eeeeee
+}
+</STYLE>
+
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 link=#0000ff rightMargin=0 topMargin=0 
+vLink=#0000ff cellpadding="0" cellspacing="0">
+<TABLE bgColor=#ffffff border=0 cellPadding=1 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#686898 vAlign=top width=105>
+      <TABLE border=0 cellPadding=2 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><BR><IMG border=0 height=1 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/clear.gif" 
+            width=105><BR><A href="http://www.devasp.com/"><IMG border=0 
+            height=30 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/devasplogo2.gif" 
+            width=100></A> <BR></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/default.asp">Home</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/samples/default.asp">Samples</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/forum/">Forum</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink href="http://www.devasp.com/search/">ASP 
+            Search</A></B> </TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/Search/default.asp?c_id=77">XML 
+            Search</A></B> </TD></TR>
+        <TR>
+          <TD><B><A class=Slink href="http://www.devasp.com/Chat/">ASP 
+            Chat</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/Samples/guestbook.asp">Guest 
+          Book</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/advertising.asp">Advertising</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink href="http://www.devasp.com/linktous.asp">Link 
+            to US</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/Search/addurl.asp">Add a 
+          Listing</A></B></TD></TR>
+        <TR>
+          <TD><B><A class=Slink 
+            href="http://www.devasp.com/contact.asp">Contact</A></B><BR><BR></TD></TR>
+        <TR>
+          <TD>
+            <FORM action=/Search/default.asp method=get><INPUT name=st size=12 
+            value="ASP Search"><BR>
+            <CENTER><INPUT style="BACKGROUND: #686898; COLOR: yellow; CURSOR: hand; FONT-FAMILY: Arial; FONT-SIZE: xx-small; FONT-WEIGHT: bold" type=submit value=Search></CENTER></FORM></TD></TR>
+        <TR>
+          <TD align=middle><A 
+            href="http://www.devasp.com/Search/redirect.asp?sid=705" 
+            target=_home><IMG alt="ASP Connections" border=0 height=30 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/aspcon_100x30.gif" 
+            width=100></A></TD></TR>
+        <TR>
+          <TD align=middle><A href="http://www.findtutorials.com/" 
+            target=_home><IMG alt=http://www.findtutorials.com/ border=0 
+            height=30 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/findtutorials.gif" 
+            width=100></A></TD></TR>
+        <TR>
+          <TD align=middle><A href="http://www.webf1.com/" target=_home><IMG 
+            alt="Visit Webf1. for Tips and Resources" border=0 height=30 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/webf1.gif" 
+            width=100></A></TD></TR>
+        <TR>
+          <TD align=middle><A href="http://www.tcp-ip.com/" target=_home><IMG 
+            alt="Click here" border=0 height=30 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/tcp-ip_logo.gif" 
+            width=100></A></TD></TR>
+        <TR>
+          <TD align=middle><A href="http://www.aspwire.com/" target=_home><IMG 
+            alt=ASPwire border=0 height=30 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/aspwire.gif" 
+            width=100></A></TD></TR>
+        <TR>
+          <TD><!-- BEGIN ASP WEB RING CODE --><IMG border=0 height=100 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/aspringlogo100x100.gif" 
+            useMap=#ASPWebRingMap width=100> <MAP name=ASPWebRingMap><AREA 
+              coords=0,0,100,69 href="http://www.asp101.com/webring" 
+              shape=RECT><AREA coords=0,70,100,85 
+              href="http://www.webring.org/cgi-bin/webring?ring=asp101;id=81;prev" 
+              shape=RECT><AREA coords=0,86,100,100 
+              href="http://www.webring.org/cgi-bin/webring?ring=asp101;id=81;next" 
+              shape=RECT></MAP><!-- END ASP WEB RING CODE --></TD></TR>
+        <TR>
+          <TD>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 height=10 width=100>
+              <TBODY>
+              <TR>
+                <TD align=middle bgColor=red><FONT color=#ffffff face=areal 
+                  size=2><B>Visitor No.</B></FONT> </TD></TR>
+              <TR>
+                <TD align=middle bgColor=blue><FONT color=#ffffff face=areal 
+                  size=2><B>268658</B></FONT> 
+      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD align=left vAlign=top width="100%">
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height=63 width="100%">
+        <TBODY>
+        <TR>
+          <TD align=middle><IMG border=0 height=2 
+            src="D:\Internet\www\new\webCal4\include\Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files\Clear(1).gif" 
+            width=650><BR><A 
+            href="http://www.devasp.com/ad_redirect.asp?url=http://www.codecharge.com?devasp&amp;ad_id=16&amp;image=/images/banner/codecharge.gif" 
+            target=Target=_new><IMG alt=CodeCharge.com border=0 height=60 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/codecharge.gif" 
+            width=468></A><BR><FONT color=#5e509c face=arial size=-3>Please 
+            visit our sponsors</FONT><BR><IMG border=0 height=1 
+            src="D:\Internet\www\new\webCal4\include\Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files\Clear(1).gif" 
+            width=650> </TD></TR></TBODY></TABLE>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD align=left bgColor=#686898 width=20><IMG border=0 height=20 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/corner1.gif" 
+            width=20></TD>
+          <TD align=right bgColor=#686898 width="100%"><IMG border=0 height=1 
+            src="D:\Internet\www\new\webCal4\include\Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files\clear(2).gif" 
+            width=400><FONT color=#ffffff face=arial size=2>Active 
+            Users:&nbsp;&nbsp;&nbsp;24</FONT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+          <TD align=right bgColor=#686898 width=20><IMG border=0 height=20 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/corner2.gif" 
+            width=20></TD></TR>
+        <TR>
+          <TD colSpan=3>
+            <TABLE border=0 cellPadding=0 cellSpacing=10 width="100%">
+              <TBODY>
+              <TR>
+                <TD align=left vAlign=top><IMG border=0 height=1 
+                  src="D:\Internet\www\new\webCal4\include\Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files\clear(2).gif" 
+                  width=420><BR>
+                  <TABLE cellPadding=0 cellSpacing=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=Main>
+                        <CENTER><FONT color=#0000ff face=arial>
+                        <H4>Sending Mail from ASP with CDONTS.NewMail 
+                        Object</H4></FONT></CENTER>
+                        <P>The NewMail object gives you the ability to send a 
+                        message within an ASP page with only few lines of code. 
+                        The syntax for sending mail with the NewMail object of 
+                        CDONTS is as follows: <BR>
+                        <P><FONT color=#0000ff face=arial 
+                        size=2>objNewMail.Send(&nbsp;&nbsp;[From]&nbsp;&nbsp;[, 
+                        To]&nbsp;&nbsp;[, Subject]&nbsp;&nbsp;[, 
+                        Body]&nbsp;&nbsp;)</FONT> 
+                        <P><FONT face=arial size=2>You can create the instance 
+                        of NewMail Object with the following code. </FONT><PRE>  <SPAN class=yellow>&lt;%</SPAN>
+  <FONT color=#0000ff>Dim objNewMail
+  Set objNewMail = Server.CreateObject("CDONTS.NewMail")</FONT>
+  <SPAN class=yellow>%&gt;</SPAN>
+  </PRE><FONT face=arial size=2><B>Properties of NewMail 
+                        Object.</B></FONT><BR>
+                        <TABLE border=1 borderColor=#666699 cellPadding=10 
+                        cellSpacing=0 width=550>
+                          <TBODY>
+                          <TR>
+                            <TD class=Main width=50>From</TD>
+                            <TD class=Main>A string value contaning the email 
+                              address of the sender<BR>(for example 
+                              Me@somewhere.com)</TD></TR>
+                          <TR>
+                            <TD class=Main>To</TD>
+                            <TD class=Main>A string value contaning the email 
+                              address of the recipient.<BR>(for example, 
+                              someone@somewhere.com)<BR>Multiple addresses can 
+                              be added by seperating wih "<B>;</B>"</TD></TR>
+                          <TR>
+                            <TD class=Main>Subject</TD>
+                            <TD class=Main>The subject line for the 
+                          message.</TD></TR>
+                          <TR>
+                            <TD class=Main>Body</TD>
+                            <TD class=Main>A string value contaning the body 
+                              text of message.</TD></TR>
+                          <TR>
+                            <TD class=Main>Cc</TD>
+                            <TD class=Main>A string contaning the email 
+                              addresss of recipents who will recieve a copy of 
+                              current message.</TD></TR>
+                          <TR>
+                            <TD class=Main>Bcc</TD>
+                            <TD class=Main>A string contaning the email 
+                              addresss of recipents who will recieve a blind 
+                              copy of current message.</TD></TR>
+                          <TR>
+                            <TD class=Main>Importance</TD>
+                            <TD class=Main>This is an Integer value that 
+                              represents the priority of message.<BR>(for 
+                              example High, Normal or Low)</TD></TR>
+                          <TR>
+                            <TD class=Main>BodyFormat</TD>
+                            <TD class=Main>An integer value which sets the 
+                              text format of NewMail 
+                              Object.<BR>ObjMail.BodyFormat = 0 (HTML 
+                              format)<BR>ObjMail.BodyFormat = 1 (default Plain 
+                              Text format)</TD></TR>
+                          <TR>
+                            <TD class=Main>MailFormat</TD>
+                            <TD class=Main>An integer value which sets the 
+                              encoding of NewMail Object.<BR>ObjMail.MailFormat 
+                              = 0 (Mime format)<BR>ObjMail.MailFormat = 1 
+                              (default Plain Text format)</TD></TR></TBODY></TABLE>
+                        <P><BR><BR><BR><B class=main>Methods of NewMail 
+                        Object.</B><BR>
+                        <TABLE border=1 borderColor=#666699 cellPadding=10 
+                        cellSpacing=0 width=550>
+                          <TBODY>
+                          <TR>
+                            <TD class=Main width=50>AttachFile</TD>
+                            <TD class=Main>This method attaches a file to the 
+                              current mesage.</TD></TR>
+                          <TR>
+                            <TD class=Main>AttachURL</TD>
+                            <TD class=Main>This method attach a file to 
+                              current message and associate a URL with that 
+                              attachment.</TD></TR>
+                          <TR>
+                            <TD class=Main>Send</TD>
+                            <TD class=Main>This method sends the 
+                          message.</TD></TR></TBODY></TABLE>
+                        <P>After the send method the NewMail object becomes 
+                        invalid but stays in the memory. <BR>You should set 
+                        NewMail Object to nothing and relase the memory after 
+                        the Send method. <BR>After the send method you will have 
+                        to create a new instance of NewMail Object if you want 
+                        to send another message. 
+                        <P>Let us see how we can use CDONTS.Newmail Object to 
+                        send mail from an ASP Page. 
+                        <P>
+                        <TABLE border=0>
+                          <TBODY>
+                          <TR bgColor=#f1f1f1>
+                            <TD noWrap vAlign=top><PRE><FONT color=#000000 face=Corier size=2>
+<BR><FONT color=#0032a8>&lt;%<BR><FONT color=blue><B>Dim</B></FONT> objNewMail<BR>
+<BR><FONT color=#007700>' First create an instance of NewMail Object</FONT><BR>
+<BR><FONT color=blue><B>Set</B></FONT> objNewMail = Server.CreateObject("CDONTS.NewMail")<BR>
+<BR><FONT color=#007700>' After an instance of NewMail Object has been created.</FONT><BR><FONT color=#007700>' If you like you can use this one line of code to send the mail.</FONT><BR><FONT color=#007700>' objNewMail.Send From, To, Subject, Message</FONT><BR><FONT color=#007700>' or you can give every value seperate</FONT><BR>
+<BR>objNewMail.From = "webmaster@devasp.com"<BR>objNewMail.To = "test@devasp.com"<BR>
+<BR><FONT color=#007700>' Please Replace From and To Email address with your </FONT><BR><FONT color=#007700>' own valid email address. I recieve too many email </FONT><BR><FONT color=#007700>' from peoples who test this sample and keep sending </FONT><BR><FONT color=#007700>' emails to test@devasp.com, or they keep From Property as </FONT><BR><FONT color=#007700>' Webmaster@devasp.com and I get Response of unDelieverable emails.</FONT><BR><FONT color=#007700>' NOTE: If To or From Properties of CDONTS Contain invalid </FONT><BR><FONT color=#007700>' email address you will not recieve the email.</FONT><BR>
+<BR>objNewMail.Subject = "This is a test Mail"<BR>objNewMail.Body = "This is the Body text of this test mail."<BR>objNewMail.Send<BR>
+<BR><FONT color=#007700>' After the Send method NewMail Object become Invalid</FONT><BR><FONT color=#007700>' You should set it to nothing to relase the memory</FONT><BR>
+<BR><FONT color=blue><B>Set</B></FONT> objNewMail = <FONT color=blue><B>Nothing</B></FONT><BR>
+<BR><FONT color=#007700>' If you want to send another mail</FONT><BR><FONT color=#007700>' you have to create a new instance of NewMail Object again.</FONT><BR>%&gt;</FONT><BR></PRE></FONT></TD></TR></TBODY></TABLE><BR><B>If 
+                        you have any Question or Comments about this article, 
+                        Please feel free to ask me.</B> 
+                        <FORM action=process.asp id=form1 method=post 
+                        name=form1><INPUT name=fname type=hidden value=contact> 
+                        <INPUT name=Sample type=hidden 
+                        value="Sending Mail with CDONTS"> 
+                        <TABLE border=0 cellPadding=2 cellSpacing=0>
+                          <TBODY>
+                          <TR>
+                            <TD><FONT face=verdana,arial,helvetica,sans-serif 
+                              size=-1><B>Name:</B>&nbsp; </FONT></TD>
+                            <TD><FONT face=verdana,arial,helvetica,sans-serif 
+                              size=-1><INPUT maxLength=24 name=name size=24> 
+                              </FONT></TD></TR>
+                          <TR>
+                            <TD><FONT face=verdana,arial,helvetica,sans-serif 
+                              size=-1><B>Email Address:</B>&nbsp; </FONT></TD>
+                            <TD><FONT face=verdana,arial,helvetica,sans-serif 
+                              size=-1><INPUT maxLength=38 name=email size=38> 
+                              </FONT></TD></TR>
+                          <TR>
+                            <TD colSpan=2><FONT 
+                              face=verdana,arial,helvetica,sans-serif 
+                              size=-1><B>Message:</B>&nbsp; <BR><TEXTAREA cols=47 name=message rows=4 value></TEXTAREA> 
+                              <BR><FONT face=verdana,arial,helvetica,sans-serif 
+                              size=-1><INPUT name=mailbox 
+                              type=checkbox>&nbsp;Send me a mail about updates 
+                              in DevASP.com <BR>
+                              <P><INPUT id=Submit1 name=Submit1 type=submit value="Send Message"> 
+                              </P></FONT></FONT></TD></TR></TBODY></TABLE></FORM>
+                        <MENU></MENU></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- Cnet banner Code-->
+            <CENTER>
+            <TABLE border=0>
+              <TBODY>
+              <TR>
+                <TD align=middle height=25>
+                <TD align=middle height=25><FONT face="arial, verdana" 
+                  size=2><A href="http://www.devasp.com/">Home</A> - <A 
+                  href="http://www.devasp.com/Search/addurl.asp">Add a 
+                  Listing</A> - <A 
+                  href="http://www.devasp.com/contact.asp">Contact US</A> - <A 
+                  href="http://www.devasp.com/advertising.asp">Advertising</A> - 
+                  <A href="http://www.devasp.com/Search/">Search</A> - <A 
+                  href="http://www.devasp.com/disclaimer.asp">Disclaimer</A> - 
+                  <A href="http://www.devasp.com/linktous.asp">Link to Us</A> 
+                  </FONT></TD></TR></TBODY></TABLE></CENTER></TD></TR>
+        <TR>
+          <TD align=left bgColor=#ffffff height=20 vAlign=bottom width=20><IMG 
+            border=0 height=20 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/corner3.gif" 
+            width=20></TD>
+          <TD bgColor=#686898 width="100%"><IMG height=5 
+            src="D:\Internet\www\new\webCal4\include\Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files\clear(2).gif" 
+            width=1></TD>
+          <TD align=right bgColor=#ffffff vAlign=bottom width=20><IMG border=0 
+            height=20 
+            src="Sending Mail from ASP with CDONTS_NewMail Object (DevASP)_files/corner4.gif" 
+            width=20></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

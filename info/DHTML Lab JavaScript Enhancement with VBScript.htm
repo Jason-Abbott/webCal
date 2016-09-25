@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://www.webreference.com/dhtml/column22/js-vbMsgBox.html -->
+<HTML><HEAD><TITLE>DHTML Lab: JavaScript Enhancement with VBScript - WebReference.com</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="DHTML Lab JavaScript Enhancement with VBScript_files/webref.htm" 
+type=text/css rel=STYLESHEET>
+<META 
+content="dynamic html CSS javascript jscript scripting dhtml css&#10;stylesheets positioning bandwidth menu html 4.0 layers eventhandlers communicator&#10;explorer 4 rollovers onmousedown onmouseUp onclick onmouseover vbscript&#10;onmouseout" 
+name=keywords>
+<META 
+content="A biweekly column on Dynamic HTML, a&#10;feature of fourth generation browsers like Netscape 4 and Explorer 4.,&#10;by Peter Belesis. DHTML uses client-side scripting to allow documents to&#10;be changed dynamically after their initial display, without server&#10;access. Use DHTML to create sophisticated, low bandwidth animations,&#10;database front-ends, multi-layered presentations and more using CSS&#10;style sheets, layers, positioning, JavaScript and VBScript." 
+name=description><LINK 
+href="DHTML Lab JavaScript Enhancement with VBScript_files/column22.css" 
+type=text/css rel=STYLESHEET>
+<SCRIPT language=JavaScript>
+<!--
+     NS4 = (document.layers);
+     IE4 = (document.all);
+    ver4 = (NS4 || IE4);   
+   isMac = (navigator.appVersion.indexOf("Mac") != -1);
+if (document.images) {
+arImLoad = new Array (
+"../art/b_left_over",
+"../art/b_left_down",
+"../art/b_right_over",
+"../art/b_right_down");
+arImList = new Array ();
+for (counter in arImLoad) {
+arImList[counter] = new Image();
+arImList[counter].src = arImLoad[counter] + ".gif";
+}}
+function navOver(imName,dir,over) {
+if (!document.images) {return};
+whichIm = document.images[imName];
+if (over) {whichIm.src = "../art/b_" + dir + "_over.gif"}
+else {whichIm.src = "../art/b_" + dir + ".gif"}
+}
+function navPress(imName,dir,press) {
+whichIm = document.images[imName];
+if (press) {whichIm.src = "../art/b_" + dir + "_down.gif"}
+else {whichIm.src = "../art/b_" + dir + ".gif"}
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#660066 aLink=#ff99ff link=#993366 bgColor=#ffffff><!-- START AD -->
+<P align=center><A target=_blank 
+href="http://www.webreference.com/event.ng/Type=click&amp;ProfileID=53&amp;RunID=14027&amp;AdID=8739&amp;TagValues=194.208.222.245.313.641&amp;FamilyID=880&amp;GroupID=7&amp;Redirect=http://www.searchenginestrategies.com"><IMG 
+height=60 alt="Essential survival skills for Internet success!" 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/boston_468x60.gif" 
+width=468 border=0></A> </P><!-- END AD -->
+<P align=center>
+<CENTER>
+<FORM class=tb action=/cgi-bin/search.cgi method=get>
+<TABLE class=include cellSpacing=0 cellPadding=2 width="100%" bgColor=black 
+border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" bgColor=#ffcc00 
+        border=0><TBODY>
+        <TR vAlign=center>
+          <TD width=32><A href="http://www.webreference.com/"><IMG height=16 
+            alt=Webref 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/l_webref32x16.gif" 
+            width=32 border=0></A></TD>
+          <TD vAlign=center><FONT size=+0><B><A 
+            href="http://www.webreference.com/">WebRef</A>&nbsp;</B></FONT></TD>
+          <TD width="70%" bgColor=#ffffff><FONT size=+0>&nbsp;<A 
+            href="http://www.webreference.com/index2.html">Sitemap</A> · <A 
+            href="http://www.webreference.com/experts/">Experts</A> · <A 
+            href="http://www.webreference.com/tools/">Tools</A> · <A 
+            href="http://www.webreference.com/services/">Services</A> · <A 
+            href="http://www.webreference.com/new/">Newsletters</A> · <A 
+            href="http://www.webreference.com/about.html">About</A></FONT></TD>
+          <TD align=right width="1%" bgColor=#ffffff><INPUT size=15 
+          name=query></TD>
+          <TD align=right width="1%" bgColor=#ffffff><INPUT class=SUBMITTER type=submit value=Search></TD>
+          <TD align=right bgColor=#ffffff><A href="http://internet.com/"><IMG 
+            height=11 alt=i.com 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/i.gif" 
+            width=72 
+border=0></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM></CENTER>
+<P></P>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD><B><A href="http://www.webreference.com/">home</A> / <A 
+      href="http://www.webreference.com/experts/">experts</A> / <A 
+      href="http://www.webreference.com/dhtml/">dhtml</A> / <A 
+      href="http://www.webreference.com/dhtml/column22/">column22</A></B> </TD>
+    <TD align=right CELLPADDING="20"><A 
+      onmouseup="navPress('imButTop2','left',false)" 
+      onmousedown="navPress('imButTop2','left',true)" 
+      onmouseover="navOver('imButTop2','left',true)" 
+      onmouseout="navOver('imButTop2','left',false)" 
+      href="http://www.webreference.com/dhtml/column22/index.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" 
+      width=18 border=0 name=imButTop2></A><A 
+      onmouseup="navPress('imButTop3','left',false)" 
+      onmousedown="navPress('imButTop3','left',true)" 
+      onmouseover="navOver('imButTop3','left',true)" 
+      onmouseout="navOver('imButTop3','left',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbIntro.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" 
+      width=18 border=0 name=imButTop3></A><A 
+      onmouseup="navPress('imButTop15','left',false)" 
+      onmousedown="navPress('imButTop15','left',true)" 
+      onmouseover="navOver('imButTop15','left',true)" 
+      onmouseout="navOver('imButTop15','left',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbTags.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" 
+      width=18 border=0 name=imButTop15></A><A 
+      onmouseup="navPress('imButTop9','left',false)" 
+      onmousedown="navPress('imButTop9','left',true)" 
+      onmouseover="navOver('imButTop9','left',true)" 
+      onmouseout="navOver('imButTop9','left',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbFunct.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" 
+      width=18 border=0 name=imButTop9></A><A 
+      onmouseup="navPress('imButTop4','left',false)" 
+      onmousedown="navPress('imButTop4','left',true)" 
+      onmouseover="navOver('imButTop4','left',true)" 
+      onmouseout="navOver('imButTop4','left',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbNorm.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" 
+      width=18 border=0 name=imButTop4></A><IMG height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_center.gif" 
+      width=18 name=imButTop1><A 
+      onmouseup="navPress('imButTop17','right',false)" 
+      onmousedown="navPress('imButTop17','right',true)" 
+      onmouseover="navOver('imButTop17','right',true)" 
+      onmouseout="navOver('imButTop17','right',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbInput.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" 
+      width=18 border=0 name=imButTop17></A><A 
+      onmouseup="navPress('imButTop22','right',false)" 
+      onmousedown="navPress('imButTop22','right',true)" 
+      onmouseover="navOver('imButTop22','right',true)" 
+      onmouseout="navOver('imButTop22','right',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbNewvb.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" 
+      width=18 border=0 name=imButTop22></A><A 
+      onmouseup="navPress('imButTop5','right',false)" 
+      onmousedown="navPress('imButTop5','right',true)" 
+      onmouseover="navOver('imButTop5','right',true)" 
+      onmouseout="navOver('imButTop5','right',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbNewjs.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" 
+      width=18 border=0 name=imButTop5></A><A 
+      onmouseup="navPress('imButTop6','right',false)" 
+      onmousedown="navPress('imButTop6','right',true)" 
+      onmouseover="navOver('imButTop6','right',true)" 
+      onmouseout="navOver('imButTop6','right',false)" 
+      href="http://www.webreference.com/dhtml/column22/js-vbFinal.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" 
+      width=18 border=0 name=imButTop6></A><A 
+      onmouseup="navPress('imButTop19','right',false)" 
+      onmousedown="navPress('imButTop19','right',true)" 
+      onmouseover="navOver('imButTop19','right',true)" 
+      onmouseout="navOver('imButTop19','right',false)" 
+      href="http://www.webreference.com/dhtml/column22/allCode.html"><IMG 
+      height=18 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" 
+      width=18 border=0 name=imButTop19></A> </TD></TR></TBODY></TABLE><!--=== BODY ===--><BR>
+<CENTER>
+<TABLE cellSpacing=10 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=137><A href="http://www.webreference.com/dhtml/"><IMG 
+      height=85 alt=Logo hspace=0 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/logo.gif" 
+      width=137 align=left border=0 name=imLogo></A></TD>
+    <TD></TD>
+    <TD vAlign=top>
+      <H2 class=head><FONT color=#003333>JavaScript Enhancement with 
+      VBScript<BR><SMALL>the not-so-droll VBScript pop-ups, 
+      1/2</SMALL></FONT></H2></TD></TR>
+  <TR>
+    <TD vAlign=top width=137>&nbsp; </TD>
+    <TD width=1 bgColor=#993366 rowSpan=2><IMG height=1 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/spacerTr.gif" 
+      width=1> </TD>
+    <TD vAlign=top>
+      <P>VBScript has its own dialogs, similar to those of JavaScript, but with 
+      the option of customization.</P>
+      <H3>The Message Box Dialog</H3><IMG height=119 hspace=10 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/exMsgBox.gif" 
+      width=171 align=left border=0>The Message Box dialog is created using the 
+      VBScript <TT>MsgBox()</TT> function: <PRE>MsgBox(prompt,buttons,title)</PRE><BR clear=all>where: 
+      <UL>
+        <LI><TT>prompt</TT> is a string to be displayed as a message to the user 
+
+        <LI><TT>buttons</TT> is an integer representing the sum of values 
+        specifying the 
+        <OL>
+          <LI>type of button group to display 
+          <LI>type of icon to display 
+          <LI>default button (accessible from keyboard ENTER key) 
+          <LI>modality of the dialog<BR><I>these are fully illustrated in the 
+          table below</I> </LI></OL>
+        <LI><TT>title</TT> is a string to be displayed in the title bar 
+    </LI></UL></TD></TR>
+  <TR vAlign=top>
+    <TD width=137><BR><BR><IMG height=100 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/Mbox1.gif" 
+      width=137 vspace=10 border=0><BR><FONT style="FONT-SIZE: 8px" 
+      face="MS Sans Serif,Geneva" POINT-SIZE="8">MsgBox(<BR>"My Message Box 
+      Title",<BR><FONT 
+      color=#000099>4</FONT>,<BR>"My&nbsp;Message&nbsp;Box&nbsp;Message")<BR>(4 
+      + 0 + 0 + 0) <BR><BR><IMG height=119 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/Mbox2.gif" 
+      width=122 vspace=10 border=0><BR>MsgBox(<BR>"DHTML Lab",<BR><FONT 
+      color=#000099>292</FONT>,<BR>"Proceed?")<BR><BR>(4 + 32 + 256 + 0) 
+      <BR><BR><IMG height=139 
+      src="DHTML Lab JavaScript Enhancement with VBScript_files/Mbox3.gif" 
+      width=119 vspace=10 border=0><BR>MsgBox("YIKES!",<BR><FONT 
+      color=#000099>21</FONT>,<BR>"FATAL!\nSystem\nCrash\nComing!")<BR>(5 + 16 + 
+      0 + 0)</FONT></TD>
+    <TD>
+      <H3>Values for the <TT>buttons</TT> Argument</H3>
+      <TABLE borderColor=blue cellSpacing=0 cellPadding=4 align=center 
+        border=1><TBODY>
+        <TR bgColor=lightblue>
+          <TD class=sans align=right><B>Value</B></TD>
+          <TD class=sans><B>Display</B></TD>
+          <TD class=sans><B>Description</B></TD>
+          <TD class=sans><B>Return Values</B></TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>0</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but0-0tr.gif" 
+            width=44 border=0></TD>
+          <TD class=sans><B>OK</B> button displayed only</TD>
+          <TD class=sans><B>1</B> - OK</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>1</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but1-0tr.gif" 
+            width=92 border=0></TD>
+          <TD class=sans><B>OK</B> and <B>Cancel</B> buttons displayed</TD>
+          <TD class=sans><B>1</B> - OK; <B>2</B> - Cancel</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>2</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but2-0tr.gif" 
+            width=140 border=0></TD>
+          <TD class=sans><B>Abort</B>, <B>Retry</B> and <B>Ignore</B> buttons 
+            displayed</TD>
+          <TD class=sans><B>3</B> - Abort; <B>4</B> - Retry; <B>5</B> - 
+          Ignore</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>3</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but3-0tr.gif" 
+            width=139 border=0></TD>
+          <TD class=sans><B>Yes</B>, <B>No</B> and <B>Cancel</B> buttons 
+            displayed</TD>
+          <TD class=sans><B>6</B> - Yes; <B>7</B> - No; <B>2</B> - 
+Cancel</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>4</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but4-0tr.gif" 
+            width=92 border=0></TD>
+          <TD class=sans><B>Yes</B> and <B>No</B> buttons displayed</TD>
+          <TD class=sans><B>6</B> - Yes; <B>7</B> - No</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>5</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but5-0tr.gif" 
+            width=92 border=0></TD>
+          <TD class=sans><B>Retry</B> and <B>Cancel</B> buttons displayed</TD>
+          <TD class=sans><B>4</B> - Retry; <B>2</B> - Cancel</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>0</TD>
+          <TD class=sans>&nbsp;</TD>
+          <TD class=sans colSpan=2>No icon displayed</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>16</TD>
+          <TD class=sans><IMG height=34 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/icon1tr.gif" 
+            width=34 border=0></TD>
+          <TD class=sans colSpan=2><B>Critical</B> icon displayed</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>32</TD>
+          <TD class=sans><IMG height=34 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/icon2tr.gif" 
+            width=34 border=0></TD>
+          <TD class=sans colSpan=2><B>Query</B> icon displayed</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>48</TD>
+          <TD class=sans><IMG height=34 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/icon3tr.gif" 
+            width=34 border=0></TD>
+          <TD class=sans colSpan=2><B>Exclamation</B> icon displayed</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>64</TD>
+          <TD class=sans><IMG height=34 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/icon4tr.gif" 
+            width=34 border=0></TD>
+          <TD class=sans colSpan=2><B>Information</B> icon displayed</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>0</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but4-0def.gif" 
+            width=92 border=0></TD>
+          <TD class=sans colSpan=2>First button is default</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>256</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but4-1def.gif" 
+            width=92 border=0></TD>
+          <TD class=sans colSpan=2>Second button is default</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>512</TD>
+          <TD class=sans><IMG height=25 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/but3-2def.gif" 
+            width=140 border=0></TD>
+          <TD class=sans colSpan=2>Third button is default</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>0</TD>
+          <TD class=sans>&nbsp;</TD>
+          <TD class=sans colSpan=2>Application Modal. Present application 
+            (browser) is suspended until user responds.</TD></TR>
+        <TR vAlign=top bgColor=#ecf4f9>
+          <TD class=sans align=right>4096</TD>
+          <TD class=sans>&nbsp;</TD>
+          <TD class=sans colSpan=2>System Modal. All applications (windows) 
+            are suspended until user responds. </TD></TR></TBODY></TABLE>
+      <P>As you can see, there are four groups of values. To achieve the dialog 
+      "look" for our application, we must take one value from each group and add 
+      them together. The resulting sum becomes our <TT>buttons</TT> 
+argument.</P>
+      <P>Refer to the examples in the left column. Compare the <TT>buttons</TT> 
+      argument value and the resulting dialog to the table above.</P>
+      <H3>Return Values</H3>
+      <TABLE borderColor=blue cellSpacing=0 cellPadding=4 align=left border=1>
+        <TBODY>
+        <TR bgColor=lightblue>
+          <TD class=sans align=right><B>Button<BR>Pressed</B></TD>
+          <TD class=sans><B>Return<BR>Value</B></TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>OK</TD>
+          <TD class=sans>1</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>Cancel</TD>
+          <TD class=sans>2</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>Abort</TD>
+          <TD class=sans>3</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>Retry</TD>
+          <TD class=sans>4</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>Ignore</TD>
+          <TD class=sans>5</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>Yes</TD>
+          <TD class=sans>6</TD></TR>
+        <TR vAlign=top>
+          <TD class=sans align=right>No</TD>
+          <TD class=sans>7</TD></TR></TBODY></TABLE>
+      <P>The <TT>MsgBox()</TT> function returns an integer value that identifies 
+      which button was clicked by the user. The table on the left lists the 
+      return values associated with the seven available buttons. The table above 
+      lists the possible return values for each button group. We'll be 
+      discussing the use of return values later.</P>
+      <P>It is apparent that the <TT>MsgBox()</TT> function can be used for 
+      better looking <B class=sans>Alert</B> and <B class=sans>Confirm</B> 
+      dialogs. But <A 
+      href="http://www.webreference.com/dhtml/column22/js-vbInput.html">what 
+      about <B class=sans>Prompt</B> 
+dialogs</A>?</P></TD></TR></TBODY></TABLE></CENTER><!--=== FOOTER ===--><BR 
+clear=all>
+<P align=right><A onmouseup="navPress('imButBot2','left',false)" 
+onmousedown="navPress('imButBot2','left',true)" 
+onmouseover="navOver('imButBot2','left',true)" 
+onmouseout="navOver('imButBot2','left',false)" 
+href="http://www.webreference.com/dhtml/column22/index.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" width=18 
+border=0 name=imButBot2></A><A onmouseup="navPress('imButBot3','left',false)" 
+onmousedown="navPress('imButBot3','left',true)" 
+onmouseover="navOver('imButBot3','left',true)" 
+onmouseout="navOver('imButBot3','left',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbIntro.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" width=18 
+border=0 name=imButBot3></A><A onmouseup="navPress('imButBot15','left',false)" 
+onmousedown="navPress('imButBot15','left',true)" 
+onmouseover="navOver('imButBot15','left',true)" 
+onmouseout="navOver('imButBot15','left',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbTags.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" width=18 
+border=0 name=imButBot15></A><A onmouseup="navPress('imButBot9','left',false)" 
+onmousedown="navPress('imButBot9','left',true)" 
+onmouseover="navOver('imButBot9','left',true)" 
+onmouseout="navOver('imButBot9','left',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbFunct.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" width=18 
+border=0 name=imButBot9></A><A onmouseup="navPress('imButBot4','left',false)" 
+onmousedown="navPress('imButBot4','left',true)" 
+onmouseover="navOver('imButBot4','left',true)" 
+onmouseout="navOver('imButBot4','left',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbNorm.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_left.gif" width=18 
+border=0 name=imButBot4></A><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_center.gif" width=18 
+name=imButBot1><A onmouseup="navPress('imButBot17','right',false)" 
+onmousedown="navPress('imButBot17','right',true)" 
+onmouseover="navOver('imButBot17','right',true)" 
+onmouseout="navOver('imButBot17','right',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbInput.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" width=18 
+border=0 name=imButBot17></A><A onmouseup="navPress('imButBot22','right',false)" 
+onmousedown="navPress('imButBot22','right',true)" 
+onmouseover="navOver('imButBot22','right',true)" 
+onmouseout="navOver('imButBot22','right',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbNewvb.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" width=18 
+border=0 name=imButBot22></A><A onmouseup="navPress('imButBot5','right',false)" 
+onmousedown="navPress('imButBot5','right',true)" 
+onmouseover="navOver('imButBot5','right',true)" 
+onmouseout="navOver('imButBot5','right',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbNewjs.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" width=18 
+border=0 name=imButBot5></A><A onmouseup="navPress('imButBot6','right',false)" 
+onmousedown="navPress('imButBot6','right',true)" 
+onmouseover="navOver('imButBot6','right',true)" 
+onmouseout="navOver('imButBot6','right',false)" 
+href="http://www.webreference.com/dhtml/column22/js-vbFinal.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" width=18 
+border=0 name=imButBot6></A><A onmouseup="navPress('imButBot19','right',false)" 
+onmousedown="navPress('imButBot19','right',true)" 
+onmouseover="navOver('imButBot19','right',true)" 
+onmouseout="navOver('imButBot19','right',false)" 
+href="http://www.webreference.com/dhtml/column22/allCode.html"><IMG height=18 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/b_right.gif" width=18 
+border=0 name=imButBot19></A></P><!-- START AD -->
+<P align=center><A target=_blank 
+href="http://www.webreference.com/event.ng/Type=click&amp;ProfileID=53&amp;RunID=14027&amp;AdID=8739&amp;TagValues=194.208.222.245.314.641&amp;FamilyID=880&amp;GroupID=7&amp;Redirect=http://www.searchenginestrategies.com"><IMG 
+height=60 alt="Essential survival skills for Internet success!" 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/boston_468x60.gif" 
+width=468 border=0></A> </P><!-- END AD -->
+<P align=center><A target=_top href="http://www.internet.com/"><IMG height=18 
+alt=http://www.internet.com 
+src="DHTML Lab JavaScript Enhancement with VBScript_files/URL.gif" width=161 
+border=0></A></P>
+<P align=center>Produced by <A href="mailto:pbel@internet.com">Peter Belesis</A> 
+and Copyright 1999-2001 <A 
+href="http://internet.com/">internet.com</A>&nbsp;Corp. <BR><A 
+href="http://www.internet.com/corporate/legal.html">Legal Notices</A>. <A 
+href="http://www.internet.com/corporate/privacy/privacypolicy.html">Privacy 
+Policy</A>. 
+<TABLE class=include cellSpacing=0 cellPadding=2 width="100%" bgColor=#000000 
+border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" bgColor=#ffcc00 
+        border=0><TBODY>
+        <TR vAlign=top bgColor=#ffffff>
+          <TD align=left width="60%" colSpan=2><SPAN 
+            style="FONT-SIZE: 120%"><A href="http://www.webreference.com/"><IMG 
+            height=16 alt=webref 
+            src="DHTML Lab JavaScript Enhancement with VBScript_files/l_webref32x16.gif" 
+            width=32 border=0></A>&nbsp;<FONT size=+0><B>The latest from <A 
+            href="http://www.webreference.com/">WebReference.com</A></B></FONT></SPAN> 
+          </TD>
+          <TD align=right bgColor=#ffffff><SPAN style="COLOR: blue"><FONT 
+            size=+0><A 
+            href="http://www.webreference.com/index2.html">Browse</A>&nbsp;&gt;</FONT></SPAN></TD>
+          <TD width="1%" bgColor=#ffffff>
+            <FORM class=tb name=WRmenu onsubmit="return false" 
+            action=/cgi-bin/redirect.cgi method=post>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><SELECT class=SUBMITTER 
+                  onchange="if(this.form.elements[0].options[this.form.elements[0].selectedIndex].value !='#') {window.location.href=this.form.elements[0].options[this.form.elements[0].selectedIndex].value};" 
+                  name=WRm> <OPTION value=/index2.html selected>Site 
+                    Contents<OPTION value=#>- - - - -<OPTION 
+                    value=/experts/>Experts<OPTION value=/3d/>* 3D 
+                    Animation<OPTION value=/dlab/>* Design<OPTION 
+                    value=/dhtml/>* DHTML<OPTION value=/graphics/>* 
+                    Graphics<OPTION value=/html/>* HTML<OPTION value=/js/>* 
+                    JavaScript<OPTION value=/perl/>* Perl<OPTION value=/xml/>* 
+                    XML<OPTION value=#>- - - - -<OPTION value=/index2.html>Web 
+                    Resources<OPTION value=/authoring/>* Authoring<OPTION 
+                    value=/authoring/design/>* Design<OPTION value=/internet/>* 
+                    Internet<OPTION value=/multimedia/>* Multimedia<OPTION 
+                    value=/programming/>* Programming<OPTION value=/promotion/>* 
+                    Promotion<OPTION value=#>- - - - -<OPTION 
+                    value=/services/>Services<OPTION value=/interviews/>* 
+                    Interviews<OPTION value=/new/>* Newsletters<OPTION 
+                    value=/reviews/>* Reviews<OPTION value=/cgi-bin/search.cgi>* 
+                    Search<OPTION value=/tools/>* Tools</OPTION></SELECT></TD>
+                <TD><INPUT class=SUBMITTER onclick="if(this.form.elements[0].options[this.form.elements[0].selectedIndex].value !='#') {window.location.href=this.form.elements[0].options[this.form.elements[0].selectedIndex].value};" type=submit value=Go></TD></TR></TBODY></TABLE></FORM></TD></TR>
+        <TR bgColor=#ffffff>
+          <TD colSpan=4><FONT size=+0><A 
+            href="http://webreference.com/new/contest.html">Signup &amp; Win 
+            JPEG Wizard and PICShow!</A> · <A 
+            href="http://webreference.com/xml/column29/">Online XML Training 
+            </A>· <A href="http://www.webreference.com/perl/tutorial/20/">Tellme 
+            More</A> </FONT></TD></TR>
+        <TR vAlign=top bgColor=#ffffff>
+          <TD colSpan=2><FONT size=+0><A 
+            href="http://www.webreference.com/index2.html">Sitemap</A> · <A 
+            href="http://www.webreference.com/experts/">Experts</A> · <A 
+            href="http://www.webreference.com/tools/">Tools</A> · <A 
+            href="http://www.webreference.com/services/">Services</A> · <A 
+            href="http://www.webreference.com/_email/email_a_colleague.html">Email 
+            a Colleague</A> · <A 
+            href="http://www.webreference.com/cgi-bin/suggest.cgi">Contact</A></FONT> 
+          </TD>
+          <TD align=right><FONT size=+0><A 
+            href="http://www.webreference.com/new/"><SPAN 
+            style="COLOR: blue">FREE&nbsp;Newsletters&nbsp;</SPAN></A>&gt;&nbsp;</FONT></TD>
+          <TD>
+            <FORM class=tb 
+            action=http://www.webreference.com/cgi-bin/signupmult.cgi 
+            method=post>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><INPUT type=hidden value=Text name=type><INPUT type=hidden 
+                  value=HTML name=type><INPUT type=hidden 
+                  value=WEBREFERENCE-UPDATE name=List_Name><INPUT 
+                  class=SUBMITTER onfocus=this.select() maxLength=99 size=11 
+                  value="enter e-mail" name=Email_Address><INPUT type=hidden 
+                  value=subscribe name=Action><INPUT type=hidden value=THE_END 
+                  name=LAST></TD>
+                <TD><INPUT class=SUBMITTER type=submit value=Signup name=Submit></TD></TR></TBODY></TABLE></FORM></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<P align=center><BR>All Rights Reserved. <A 
+href="http://www.internet.com/corporate/legal.html">Legal 
+Notices.</A><BR>Created: Nov. 18, 1998<BR>Revised: Nov. 18, 1998</P>
+<P align=center><SMALL>URL: 
+http://www.webreference.com/dhtml/column22/js-vbMsgBox.html</SMALL></P><BR></BODY></HTML>

@@ -1,0 +1,288 @@
+<HTML>
+<HEAD>
+	<TITLE>overLIB 2.22 - Documentation</TITLE>
+</HEAD>
+<LINK REL="stylesheet" HREF="overlib.css" TYPE="text/css">
+
+<BODY BGCOLOR="#FFFFFF">
+
+<DIV ID="overDiv" STYLE="position:absolute; visibility:hide; z-index: 1;"></DIV>
+<SCRIPT LANGUAGE="JavaScript" SRC="overlib.js"></SCRIPT>
+
+<CENTER>
+
+<BR><BR>
+
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD>
+	<IMG SRC="logo.gif" WIDTH=300 HEIGHT=25 ALT="" BORDER="0">
+</TD></TR>
+</TABLE>
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="2" BGCOLOR="#333399">
+<TR>
+	<TD>
+		<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#CCCCFF">
+		<TR>
+			<TD>
+				<FONT FACE="Verdana,Arial,Helvetica">
+				<FONT SIZE="+1"><B>What this is</B></FONT><BR>
+				overLIB is a JavaScript library created to enhance websites with
+				small popup information boxes to help visitors around your website.
+				It's created from an original idea by myself (Erik Bosrup).
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>What you can do</B></FONT><BR>
+				You can make popups
+				<A HREF="docs.html" onMouseOver="drs('A popup without a caption.'); return true;" onMouseOut="nd(); return true;">without caption</A>.
+				Or you can make them have a
+				<A HREF="docs.html" onMouseOver="drc('Popup with a caption.','This is the caption!'); return true;" onMouseOut="nd(); return true;">caption</A>.
+				You can also make them appear on the 
+				<A HREF="docs.html" onMouseOver="dls('A popup without a caption.'); return true;" onMouseOut="nd(); return true;">left</A>,
+				and of course use a 
+				<A HREF="docs.html" onMouseOver="dlc('Popup with a caption.','This is the caption!'); return true;" onMouseOut="nd(); return true;">caption</A>.
+				You can also make a 
+				<A HREF="docs.html" onClick="src('Here is some sticky text...','Sticky'); return false;" onMouseOver="drs('Click for a sticky!'); return true;" onMouseOut="nd(); return true;">sticky</A>
+				that stays put when you click on it. It can contain any html you wish.
+				Of course you can also make ones that show on the
+				<A HREF="docs.html" onClick="slc('This one sticks to the left.','Left Sticky'); return false;" onMouseOver="dls('Click for a sticky!'); return true;" onMouseOut="nd(); return true;">left</A>.
+				To really know how useful these can be you should check out the site
+				I made these for,<B>
+				<A HREF="http://www.visualirc.com/" onMouseOver="drc('This site shows how popups and stickies can be used to enhance the navigation of a site.','The Visual IRC Guide'); return true;" onMouseOut="nd(); return true;">The Visual IRC Guide</A>.
+				</B>
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>What you may do</B></FONT><BR>
+				This script library was created for my personal usage from the start
+				but then it became so popular I made an easy to use version. It's that
+				version you're using now. Since this is free please don't try to sell
+				this solution to a company claiming it is yours. Give me credit where
+				credit is due and I'll be happy. And I'd love to see any changes you've
+				done to the code. <B>Free to use - don't abuse.</B>
+				<BR><BR>
+
+				<FONT SIZE="+1"><B>What version this is</B></FONT><BR>
+				This is version 2.22. Make sure you check back to 
+				<A HREF="http://www.bosrup.com/web/overlib/" onMouseOver="drc('Goto the overLIB homepage!','overLIB 2.22'); return true;" onMouseOut="nd(); return true;">http://www.bosrup.com/</A>
+				now and then for new and even better versions. This file and the source
+				was last edited on 1999-04-02.
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>What's new</B></FONT><BR>
+				Changes in 2.22:<BR>
+				Added Microsoft Stupidity Check to make Internet Explorer 5.0 move the popups
+				correctly. Sometimes the browser companies really amaze me.
+				<BR><BR>
+				Changes in 2.2:<BR>
+				New functions that allows the box to be centered as well as the promised code for allowing
+				setup to be done on the webpages. When using the centering versions of of the functions
+				bear in mind that the offsetx variable still affects the position.
+				<BR><BR>
+
+				<FONT SIZE="+1"><B>How to use it</B></FONT><BR>
+				Usually it's easiest to look at the
+				<A HREF="view-source:http://www.bosrup.com/web/overlib/o2/docs.html" onMouseOver="drc('View this source to learn how to use overLIB quickly.','Source'); return true;" onMouseOut="nd(); return true;">source</A>
+				of a page and copy what you want.
+				I recommend you to do that if you want a fly start, but I'll also give you
+				the exact details on how to use the functions.
+				<BR><BR>
+				The public functions are all three characters long, expect for the onMouseOut
+				function which differs. The three character convention is made to make it
+				easy for you to remember. The first character is either d or s, <B>D</B>ummy or
+				<B>S</B>ticky. The second character sets the alignment, it can as of version 2.2
+				be <B>C</B>enter, <B>L</B>eft or <B>R</B>ight. The last character determines
+				if there should be a caption. It can be <B>S</B>imple or <B>C</B>aption.
+				<BR><BR>
+				All the popups are called from the onMouseOver event. They must also be
+				closed from the onMouseOut event. The stickies are called from the
+				onClick event. Or they can be called from a javascript: url.
+				<BR><BR>
+				onMouseOver functions:<BR><BLOCKQUOTE><FONT SIZE="-1">
+					<B>Center</B> (remove the xoffset for complete center)<BR>
+                    dcs(text)<BR>
+                    dcc(text, caption)<BR>
+					<B>Right</B><BR>
+					drs(text)<BR>
+                    drc(text, caption)<BR>
+					<B>Left</B><BR>
+					dls(text)<BR>
+                    dlc(text, caption)<BR>
+				</FONT></BLOCKQUOTE>
+				onMouseOut functions:<BR><BLOCKQUOTE><FONT SIZE="-1">
+					nd()<BR>
+				</FONT></BLOCKQUOTE>
+				onClick functions:<BR><BLOCKQUOTE><FONT SIZE="-1">
+					scc(text, caption)<BR>
+					src(text, caption)<BR>
+					slc(text, caption)<BR>
+				</FONT></BLOCKQUOTE>
+				onMouseOver and onMouseOut functions should use <CODE>return true;</CODE> while
+				onClick functions should use <CODE>return false;</CODE>.
+				<BR><BR>
+				A popup example:<BR>
+				<CODE>&lt;A HREF="docs.html" onMouseOver="drc('Text','Caption'); return true;" onMouseOut="nd(); return true;"&gt;Popup&lt;/A&gt;</CODE>
+				<BR>Would result in:
+				<A HREF="docs.html" onMouseOver="drc('Text','Caption'); return true;" onMouseOut="nd(); return true;">Popup</A>
+				<BR><BR>
+				A sticky example:<BR>
+				<CODE>&lt;A HREF="docs.html" onClick="src('Text','Caption'); return false;" onMouseOver="drs('Popup text'); return true;" onMouseOut="nd(); return true;"&gt;Sticky&lt;/A&gt;</CODE>
+				<BR>Would result in:
+				<A HREF="docs.html" onClick="src('Text','Caption'); return false;" onMouseOver="drs('Popup text'); return true;" onMouseOut="nd(); return true;">Sticky</A>
+				<BR><BR>
+				Look in the 
+				<A HREF="view-source:http://www.bosrup.com/web/overlib/o2/docs.html" onMouseOver="drc('View this source to learn how to use overLIB quickly.','Source'); return true;" onMouseOut="nd(); return true;">source</A>
+				for more examples.
+				<BR><BR>
+				
+				To change colors etc you should edit the JavaScript source file
+				(it is documented there)
+				or use the module template below.
+				<BR><BR>
+		
+				<FONT SIZE="+1"><B>What needs to be on the page</B></FONT><BR>
+				You must have two things on the page besides the actual function calls
+				described above on the page for this to work. There is also a third that
+				is optional.
+				<BR><BR>
+				
+				Within your &lt;BODY&gt;&lt/BODY&gt; you must place:<BR>
+				<CODE>				
+				&lt;DIV ID="overDiv" STYLE="position:absolute; visibility:hide; z-index:1;"&gt;&lt;/DIV&gt;<BR>
+				&lt;SCRIPT LANGUAGE="JavaScript" SRC="overlib.js"&gt;&lt;/SCRIPT&gt;<BR>
+				</CODE>
+				<BR>
+				
+				Make sure you link that JavaScript library correctly.
+				<BR><BR>
+				Optionally you can place the following just after &lt;/HEAD&gt;:<BR>
+				<CODE>
+				&lt;LINK REL="stylesheet" HREF="overlib.css" TYPE="text/css"&gt;<BR>
+				</CODE>
+				<BR>
+				This last snippet defines the font face, size etc for the popups and stickies.
+				You can edit that file if you wish to change anything.
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>How to change settings on the page</B></FONT><BR>
+				Take a look at this 
+				<A HREF="view-source:http://www.bosrup.com/web/overlib/o2/template.html" onMouseOver="dcc('Example of how to set colors and stuff on the webpage.','Template'); return true;" onMouseOut="nd(); return true;">template</A>
+				for changing colors, size etc from the webpage
+				instead of the javascript source. This is great when you need to override
+				the default on a large site.
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>What to do with questions</B></FONT><BR>
+				You can always email me (Erik Bosrup) at
+				<A HREF="mailto:erik@bosrup.com" onMouseOver="drc('Send email to me at erik@bosrup.com at any time.','Email'); return true;" onMouseOut="nd(); return true;">erik@bosrup.com</A>.
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>What you can add</B></FONT><BR>
+				The JavaScript source should be easy to edit for anyone, also easy to expand on with just
+				little knowledge of JavaScript. Interesting implementations that can be done is to store
+				the texts and captions in arrays instead of passing them on. overLIB 1.0 had this but most
+				people didn't seem to want that. If you know what an array is you can probably do it. On
+				large websites you can save a lot transfers and work. If you make any cool new features
+				for this send them to me, I'd like to see them. You can also send me any feature
+				requests you have.
+				<BR><BR>
+				You might also want to implement statusbar messages, they were a part of 1.0 but
+				since I don't have time to do it now and we don't want HTML to show up in the
+				statusbar (which it would if I did it the easy way) I'm leaving that to you.
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>Where credit is due...</B></FONT><BR>
+				I didn't make this all by myself, even though most of it.
+				<A HREF="mailto:gnowknayme@visualirc.com" onMouseOver="drs('Send an email to Gnowknayme.'); return true;" onMouseOut="nd(); return true;">Gnowknayme</A>
+				provided some cool stuff to customize the design on the
+				page instead of in the script and
+				<A HREF="mailto:r6040c@email.sps.mot.com" onMouseOver="drs('Send an email to Landon.'); return true;" onMouseOut="nd(); return true;">Landon Bradshaw</A>
+				made the first
+				implementation of popup on the left.
+				<A HREF="mailto:catherine@cerridwen.net" onMouseOver="drs('Send an email to Catherine.'); return true;" onMouseOut="nd(); return true;">Catherine La Croix</A>
+				came up with the idea of having centered versions.			
+				Many thanks to 
+				<A HREF="http://www.dansteinman.com" onMouseOver="drc('Dan\'s homepage has some excellent tutorials for everyone to read.','Dan Steinman'); return true;" onMouseOut="nd(); return true;">Dan Steinman</A>
+				for his great Dynamic Duo pages. I've also used some of his 
+				functions slightly modified.
+				<BR><BR>
+				
+				<FONT SIZE="+1"><B>Sites that use overLIB</B></FONT><BR>
+				Send me a note if your sites uses overLIB and it will be 
+				listed here as well.
+				<UL>
+				
+				<LI><A HREF="http://www.psxspace.com/" onMouseOver="drc('Sharifudin Rizal: rizal@psxspace.com','Independant PlayStation Resource Site'); return true;" onMouseOut="nd(); return true;">Independant PlayStation Resource Site</A><BR>
+				<LI><A HREF="http://www.projectgamma.com/" onMouseOver="drc('webmaster@projectgamma.com','Project Gamma'); return true;" onMouseOut="nd(); return true;">Project Gamma</A><BR>
+				<LI><A HREF="http://www.absolutecross.com/tutorials/photoshop.htm" onMouseOver="drc('Webmaster: webmaster@absolutecross.com','Absolute Cross Photoshop Tutorials'); return true;" onMouseOut="nd(); return true;">Absolute Cross Photoshop Tutorials</A><BR>
+				<LI><A HREF="http://www.manilazoo.com/" onMouseOver="drc('webmaster@manilazoo.com','Manila Zoo'); return true;" onMouseOut="nd(); return true;">Manila Zoo</A><BR>
+				<LI><A HREF="http://www.flixml.org/" onMouseOver="drc('Webmaster: simpson@flixml.org','FlixML Home Page'); return true;" onMouseOut="nd(); return true;">FlixML Home Page</A><BR>
+				<LI><A HREF="http://www.visualirc.com/" onMouseOver="drc('Webmaster: Erik Bosrup (erik@bosrup.com)','The Visual IRC Guide'); return true;" onMouseOut="nd(); return true;">The Visual IRC Guide</A><BR>
+				<LI><A HREF="http://d2mac.techno.org/" onMouseOver="drc('Webmaster: Mattias Larsson (ml@techno.org)','automatic d2mac'); return true;" onMouseOut="nd(); return true;">automatic d2mac</A><BR>
+				<LI><A HREF="http://www.lizweb.com/tulling/" onMouseOver="drc('Even J Jordal: ejordal@netpower.no','Tulling Toppen'); return true;" onMouseOut="nd(); return true;">Tulling Toppen</A><BR>
+				<LI><A HREF="http://www.adlight.com/dolly/" onMouseOver="drc('Dolly: doll@shaw.wave.ca','Dollys Christian Corner'); return true;" onMouseOut="nd(); return true;">Dolly's Christian Corner</A><BR>
+				<LI><A HREF="http://www.x-dimension.de/netviet/" onMouseOver="drc('webmaster@netviet.com','NetViet Magazin'); return true;" onMouseOut="nd(); return true;">NetViet Magazin</A><BR>
+				<LI><A HREF="http://www.skychem.com/" onMouseOver="drc('info@skychem.com','Zhuhai Skyhigh Chemicals'); return true;" onMouseOut="nd(); return true;">Zhuhai Skyhigh Chemicals</A><BR>
+				<LI><A HREF="http://www.geocities.com/~scottarius/3eb/" onMouseOver="drc('Scott Bounds: scotty00@uswest.net','Can We Get Clean Again?'); return true;" onMouseOut="nd(); return true;">Can We Get Clean Again?</A><BR>
+				<LI><A HREF="http://www.freesexpage.com/" onMouseOver="drc('webmaster@freesexpage.com','free sex page'); return true;" onMouseOut="nd(); return true;">free sex page</A><BR>
+				<LI><A HREF="http://www.pics-4-free.com/" onMouseOver="drc('Webmaster: webmaster@free-sex-pics.com','pics-4-free.com'); return true;" onMouseOut="nd(); return true;">pics-4-free.com</A><BR>
+				<LI><A HREF="http://darkwater.hypermart.net/Blades/index.html" onMouseOver="drc('Author Not Known.','BLADES'); return true;" onMouseOut="nd(); return true;">BLADES</A><BR>
+				<LI><A HREF="http://www.cambs.com/" onMouseOver="drc('admin@cambs.com','Cambs'); return true;" onMouseOut="nd(); return true;">Cambs</A><BR>
+				<LI><A HREF="http://www.startreksim.com/ssg/fws/index1.htm" onMouseOver="drc('benoith@microtec.net','Starfleet Sim Group'); return true;" onMouseOut="nd(); return true;">Starfleet Sim Group</A><BR>
+				<LI><A HREF="http://www.startreksim.com/ssg/academy/index1.html" onMouseOver="drc('benoith@microtec.net','TNZ E-mail Sim Academy'); return true;" onMouseOut="nd(); return true;">TNZ E-mail Sim Academy</A><BR>
+				<LI><A HREF="http://members.xoom.com/Boveresse/" onMouseOver="drc('Webmaster: irq@bluewin.ch','Boveresse'); return true;" onMouseOut="nd(); return true;">#Boveresse, mon amour... '98</A><BR>
+				<LI><A HREF="http://www.bengt-wase.nu/java/jscript.html" onMouseOver="drc('webmaster@bengt-wase.nu','!BwD webdesign!'); return true;" onMouseOut="nd(); return true;">!BwD webdesign!</A><BR>
+				<LI><A HREF="http://members.tripod.com/~dnny/ad.html" onMouseOver="drc('Denny Awang: dnny@tm.net.my','Pengenalan'); return true;" onMouseOut="nd(); return true;">Pengenalan</A><BR>
+				<LI><A HREF="http://members.cnx.net/reboot/" onMouseOver="drc('Jim and Sue: reboot@cnx.net','Jim and Sues Free Files'); return true;" onMouseOut="nd(); return true;">Jim and Sue's Free Files</A><BR>
+				<LI><A HREF="http://www.geocities.com/Yosemite/Trails/2625/" onMouseOver="drc('Bob Hornett: hornet@perf.bc.ca','Trailer Sailing Websites'); return true;" onMouseOut="nd(); return true;">Trailer Sailing Websites</A><BR>
+				<LI><A HREF="http://www.powwows.com/dancing/" onMouseOver="drc('powwow@ccresources.net','Pow Wow Dancing'); return true;" onMouseOut="nd(); return true;">Pow Wow Dancing</A><BR>
+				<LI><A HREF="http://www2.netdoor.com/~photo1/EICA/eica.html" onMouseOver="drc('Webmaster: photo1@netdoor.com','The Eros Institute'); return true;" onMouseOut="nd(); return true;">The Eros Institute</A><BR>
+				<LI><A HREF="http://freespace.virgin.net/ns.a/stanbridge.htm" onMouseOver="drc('Neil Armstrong: wyvernsociety@postmaster.co.uk','Wyvern Society of Stanbridge Earls School'); return true;" onMouseOut="nd(); return true;">Wyvern Society of Stanbridge Earls School</A><BR>
+				<LI><A HREF="http://www.greatlink.org/" onMouseOver="drc('Christopher Howell: chowell@enterprise.net','The Great Link: UK Star Trek Web'); return true;" onMouseOut="nd(); return true;">The Great Link: UK Star Trek Web</A><BR>
+				<LI><A HREF="http://www.greatlink.org/ds9episodes/ds9-season7.html" onMouseOver="drc('Christopher Howell: chowell@enterprise.net','TGLs The Final Page'); return true;" onMouseOut="nd(); return true;">TGLs The Final Page</A><BR>
+				<LI><A HREF="http://home.earthlink.net/~pmcfadin/javamap.htm" onMouseOver="drc('Phil McFadin: phil-mcfadin@email.msn.com','50+Haven Roomies'); return true;" onMouseOut="nd(); return true;">50+Haven Roomies</A><BR>
+				<LI><A HREF="http://www.kamjit.cz/" onMouseOver="drc('Jacek Kopecky: kopeckyj@inf.upol.cz','www.kamjit.cz'); return true;" onMouseOut="nd(); return true;">www.kamjit.cz</A><BR>
+				<LI><A HREF="http://www.imagin.net/~dwagner/techie/icqplus/t90321.htm" onMouseOver="drc('Don Wagner: dwagner@imagin.net','Techie Valley ICQ Plus'); return true;" onMouseOut="nd(); return true;">Techie Valley ICQ Plus</A><BR>
+				<LI><A HREF="http://www.bmc.nl/" onMouseOver="drc('Webmaster: webmaster@bmc.nl','BMC Group'); return true;" onMouseOut="nd(); return true;">BMC Group</A><BR>
+				<LI><A HREF="http://www.flowerfocus.com/" onMouseOver="drc('Troy Taylor: siteinfo@flowerfocus.com','FlowerFocus'); return true;" onMouseOut="nd(); return true;">FlowerFocus</A><BR>
+				<LI><A HREF="http://www.ustba.com/" onMouseOver="drc('Tony Girgenti: tony@multi-techcx.com','United States Ticket Brokers Association'); return true;" onMouseOut="nd(); return true;">United States Ticket Brokers Association</A><BR>
+				<LI><A HREF="http://www.irwm.com/" onMouseOver="drc('Rick Walp: irwm@irwm.com','Internet Racing World Mall'); return true;" onMouseOut="nd(); return true;">Internet Racing World Mall</A><BR>
+			  
+				<BR>Beside all of these sites <B>FAA</B> and <B>Motorola</B> both <B>use overLIB</B> in their intranets. overLIB has also
+				been mentioned elsewhere:<BR><BR>
+				
+				<LI><A HREF="http://www.zdnet.com/devhead/stories/articles/0,4413,2218804,00.html" onMouseOver="drc('overLIB 2.22 was featured on DevHead\'s JavaScript column.','ZDNet DevHead'); return true;" onMouseOut="nd(); return true;">ZDNet DevHead</A><BR>
+				<LI><A HREF="http://dynamicdrive.com/dynamicindex5/popinfo.htm" onMouseOver="drc('overLIB 2.22 was featured on DynamicDrive','DynamicDrive'); return true;" onMouseOut="nd(); return true;">DynamicDrive</A><BR>
+							
+				</UL>
+				<BR><BR>
+				
+				</FONT>
+			</TD>
+		</TR>
+		</TABLE>
+	</TD>
+</TR>
+</TABLE>
+
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD ALIGN="CENTER">
+<BR>
+<font size=1 color=white>
+<a target=_top href=http://extreme-dm.com/s/?tag=ol2t>
+<img name=im src=http://extreme-dm.com/i/ height=38
+width=41 border=0></a><script><!--
+an=navigator.appName;sr='http://extreme-dm.com/';srw="na";
+srb="na";d=document;r=41;function pr(n) {d.write("<img sr",
+"c=\""+sr+""+n+"\/?tag=ol2t&j=y&srw="+srw+"&srb="+srb+"&l=",
+""+escape(d.referrer)+"&rs="+r+"\" height=1 width=1>");}//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?srb=s.colorDepth:srb=s.pixelDepth//-->
+</script><script><!--
+d.images?r=d.im.width:z=0;pr("z")//-->
+</script><noscript><img src=http://extreme-dm.com/z/?tag=ol2t&j=n
+height=1 width=1></noscript></font>
+</TD></TR></TABLE>
+
+</CENTER>
+
+</BODY>
+
+</HTML>
