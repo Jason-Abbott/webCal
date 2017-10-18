@@ -59,7 +59,7 @@ Once you have added a user account you can select "Logout" from the main calenda
 
 ### CUSTOMIZING THE CALENDAR
 
-webCal allows you to easily change the date format and colors used throughout the entire calendar by editing one file, webCal3_themes.inc.  This file includes insructions and examples on how to adjust the date format and color themes.  
+webCal allows you to easily change the date format and colors used throughout the entire calendar by editing one file, webCal3_themes.inc. This file includes instructions and examples on how to adjust the date format and color themes.  
 
 ### USER MANAGEMENT
 
