@@ -8,6 +8,7 @@ A number of organizations hired me to customize and extend the calendar, among t
 
 # Innovations
 - Elegant day, week and month views supported across version 3 and 4 browsers (painful) with clever `<table>` usage.
+- Themeable from a set of coordinated palettes with instructions on how to create your own.
 - Data model allowing various kinds of event repetition and events that span days.
 
 
